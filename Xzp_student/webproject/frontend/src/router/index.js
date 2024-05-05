@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
-import Layout from '@/layout'
 // 公共路由
 export const constantRoutes = [
   {
@@ -11,16 +10,16 @@ export const constantRoutes = [
   },
   {
     path: '',
-    component: Layout,
-    redirect: 'index',
-    children: [
-      {
-        path: '/index',
-        component: () => import('@/views/home/home'),
-        name: '首页',
-      }
-    ]
-  },  
+    component: () => import('@/views/home/Home'),
+    hidden: true
+  },
 ]
+
+// 创建 Router 实例
+const router = new Router({
+  routes: constantRoutes
+})
+
+export default router
 
 

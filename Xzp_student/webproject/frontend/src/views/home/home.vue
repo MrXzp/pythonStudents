@@ -1,6 +1,6 @@
 <template>
   <div class="view-container">
-    
+   首页内容
   </div>
 </template>
 
@@ -36,9 +36,10 @@ export default {
  
 <style lang="scss" scoped>
 .view-container {
- height: 100vh;
- width: 100vh;
-
-
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    color: #ffffff;
+  /* 样式 */
 }
 </style>

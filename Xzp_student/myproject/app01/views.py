@@ -29,7 +29,7 @@ def login(request):
 def user_add(request):
     models.MyUser.objects.create(nickName="刘禅",account='liuc',phone='15777478591',roleId='20003')
     return generate_response(200,{},'返回用户列表接口')
-
+ 
 
 
 
