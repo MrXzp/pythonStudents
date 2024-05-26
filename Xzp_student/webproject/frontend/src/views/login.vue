@@ -26,6 +26,7 @@
   </div>
 </template>
 <script>
+import {Userlogin } from '@/api/login'
 export default {
   data() {
     return {
@@ -64,11 +65,26 @@ export default {
     });
   },
   methods: {
+
     submitForm() {
       // 表单提交逻辑
+      
 
-      console.log('s');
+      Userlogin(this.formData).then(res => {
+        if (res.data.code === 200) {
+          console.log('登录成功');
+        } else {
+          console.log(res.data.msg);
 
+          console.log('登录参数', this.$message);
+
+          this.$message({
+            showClose: true,
+            message: res.data.msg,
+            type: 'error',        
+          })
+        }
+      })
     },
     togglePasswordVisibility() {
       const root = document.documentElement;

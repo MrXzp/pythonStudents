@@ -10,7 +10,7 @@ export const constantRoutes = [
   },
   {
     path: '',
-    component: () => import('@/views/home/Home'),
+    component: () => import('@/views/home/home'),
     hidden: true
   },
 ]
