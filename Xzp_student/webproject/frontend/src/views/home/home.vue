@@ -1,10 +1,13 @@
 <template>
   <div class="view-container">
-   首页内容
+    <Caidan></Caidan>
+    <ShowImg></ShowImg>
   </div>
 </template>
 
 <script>
+import Caidan from "@/components/Caidan.vue";
+import ShowImg from "@/components/ShowImg.vue";
 export default {
   name: '',
   data() {
@@ -12,7 +15,10 @@ export default {
       message: '你好，Vue 2！',
     };
   },
-  components: {},
+  components: {
+    Caidan,
+    ShowImg
+  },
   created() {
     console.log('组件已创建。');
   },
@@ -40,6 +46,7 @@ export default {
     width: 100vw;
     background-color: #000000;
     color: #ffffff;
+    display: flex;
   /* 样式 */
 }
 </style>
